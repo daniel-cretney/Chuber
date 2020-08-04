@@ -16,7 +16,9 @@
     <h1 id='slogan'>Gettin' you where you need to be.</h1>
     <form method='post' action='registration.php'>
         <label id='slogan'>How long was your ride in minutes?</label><br>
-        <input type='number' name='number' min='1'required><br><br>
+        <input type='number' name='number' min='1' id='center' placeholder='$1/min' required><br><br>
+        <label id='slogan'>Do you wish to tip your driver?</label><br>
+        <input type='number' name='tip' min='0' id='center' placeholder='Leave Blank For No Tip'><br><br>
         <input type='submit' id='button' class='btn btn-default' value='Submit'>
     </form>
 </body>

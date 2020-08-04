@@ -27,7 +27,7 @@
           return actions.order.create({
             purchase_units: [{
               amount: {
-                value: <?php echo $_POST['number'] ?>
+                value: <?php echo $_POST['number'] + $_POST['tip']?>
               }
             }]
           });

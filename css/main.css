@@ -36,6 +36,10 @@ button a:hover    {
         width: 100%;
 }
 
+#center {
+    text-align: center;
+}
+
 #slides-container   {
     width: 50%;
     height: 40%;

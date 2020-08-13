@@ -15,11 +15,17 @@
 <body class='main-container'><br>
     <?php 
     $message = "Name: " + $_POST['name'] + ", Phone Number: " + $_POST['tel'] + ", Pickup Location: " + $_POST['pickup'] 
-    + ", Destination: " + $_POST['destination'] + ", Text: " + $_POST['text'];
-        if($_POST['message']){
-        mail("chubersml@gmail.com", "Chuber Rides Request", $message, "From: " + $_POST['email']);
-    }?>
+    + ", Destination: " + $_POST['destination'];
+    $sendMail = mail("chubersml@gmail.com", "Chuber Rides Request", $message);
+    if ($sendMail){
+        echo "Request Sent Successfully";
+    }else{
+        echo "Request Failed, Try Again";
+    }
+    ?>
+    
     <h1 id='slogan'>Request Sent, thank you!</h1>
+    <button type="button" id='button' class='btn btn-default'><a href='index.html'><i>Home Page</i></a></button>
 </body>
 <footer>
     <div class='col-12'>

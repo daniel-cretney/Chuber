@@ -18,13 +18,11 @@
     + ", Destination: " + $_POST['destination'];
     $sendMail = mail("chubersml@gmail.com", "Chuber Rides Request", $message);
     if ($sendMail){
-        echo "Request Sent Successfully";
+        ?><h1><?php echo "Request Sent Successfully";?></h1><?php
     }else{
-        echo "Request Failed, Try Again";
+        ?><h1><?php echo "Request Failed, Try Again";?></h1><?php
     }
     ?>
-    
-    <h1 id='slogan'>Request Sent, thank you!</h1>
     <button type="button" id='button' class='btn btn-default'><a href='index.html'><i>Home Page</i></a></button>
 </body>
 <footer>

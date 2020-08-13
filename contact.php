@@ -13,12 +13,13 @@
     <a href='index.html'><img id='image'src='photos/logo.jpg'></a>
 </nav>
 <body class='main-container'><br>
-    <h1 id='slogan'>Gettin' you where you need to be.</h1>
-    <h5 id='slogan'>Boat Rides on Smith Mountain Lake</h5>
-    <h5 id='slogan'>Rate $1/Min</h5>
-    <br>
-    <button type="button" id='button' class='btn btn-default'><a href='request.php'><i>Request a Ride</i></a></button>
-    <button type="button" id='button' class='btn btn-default'><a href='payment.php'><i>Go to Payment</i></a></button>
+    <?php 
+    $message = "Name: " + $_POST['name'] + ", Phone Number: " + $_POST['tel'] + ", Pickup Location: " + $_POST['pickup'] 
+    + ", Destination: " + $_POST['destination'] + ", Text: " + $_POST['text'];
+        if($_POST['message']){
+        mail("chubersml@gmail.com", "Chuber Rides Request", $message, "From: " + $_POST['email']);
+    }?>
+    <h1 id='slogan'>Request Sent, thank you!</h1>
 </body>
 <footer>
     <div class='col-12'>

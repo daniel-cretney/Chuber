@@ -14,13 +14,13 @@
 </nav>
 <body class='main-container'><br>
     <?php 
-    $message = "Name: " + $_POST['name'] + ", Phone Number: " + $_POST['tel'] + ", Pickup Location: " + $_POST['pickup'] 
-    + ", Destination: " + $_POST['destination'];
-    $sendMail = mail("chubersml@gmail.com", "Chuber Rides Request", $message);
+    $message = "Name: " . $_POST['name'] . ", Phone Number: " . $_POST['tel'] . ", Pickup Location: " . $_POST['pickup'] 
+    . ", Destination: " . $_POST['destination'];
+    $sendMail = mail("chubersml@gmail.com", "Chuber Rides Request From " . $_POST['name'], $message, "From: " . $_POST['email']);    
     if ($sendMail){
-        ?><h1><?php echo "Request Sent Successfully";?></h1><?php
+        ?><h1 id='slogan'><?php echo "Request Sent Successfully";?></h1><?php
     }else{
-        ?><h1><?php echo "Request Failed, Try Again";?></h1><?php
+        ?><h1 id='slogan'><?php echo "Request Failed, Try Again";?></h1><?php
     }
     ?>
     <button type="button" id='button' class='btn btn-default'><a href='index.html'><i>Home Page</i></a></button>

@@ -18,12 +18,15 @@
     . ", Destination: " . $_POST['destination'];
     $sendMail = mail("chubersml@gmail.com", "Chuber Rides Request From " . $_POST['name'], $message, "From: " . $_POST['email']);    
     if ($sendMail){
-        ?><h1 id='slogan'><?php echo "Request Sent Successfully";?></h1><?php
-    }else{
-        ?><h1 id='slogan'><?php echo "Request Failed, Try Again";?></h1><?php
+        ?><h1 id='slogan'><?php echo "Request Sent Successfully";?></h1><br><br>
+        <button type="button" id='button' class='btn btn-default'><a href='index.html'><i>Home Page</i></a></button><?php
     }
+    else {
+        ?><h1 id='slogan'><?php echo "Request Failed, Try Again";?></h1><br><br>
+        <button type="button" id='button' class='btn btn-default'><a href='request.php'><i>Request Page</i></a></button>
+        <button type="button" id='button' class='btn btn-default'><a href='index.html'><i>Home Page</i></a></button><?php
+        }
     ?>
-    <button type="button" id='button' class='btn btn-default'><a href='index.html'><i>Home Page</i></a></button>
 </body>
 <footer>
     <div class='col-12'>

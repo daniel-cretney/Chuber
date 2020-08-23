@@ -14,7 +14,7 @@
 </nav>
 <body class='main-container'><br>
     <h1 id='slogan'>Gettin' you where you need to be.</h1>
-    <h7 id='slogan'><i>(If you don't get a phone call back within the first ten minutes assume driver is busy)</i></h7><br><br>
+    <h7 id='slogan'><i>(If you don't get a phone call back within the first ten minutes, assume driver is busy)</i></h7><br><br>
     <h1 id='slogan'>Request a Ride</h1><br>
     <form method='post' action='contact.php'>
         <input type='text' name='name' id='center' size='30' placeholder='Enter Your Full Name' required><br><br>
@@ -26,4 +26,10 @@
         <input type='submit' id='button' class='btn btn-default' value='Submit'>
     </form>
 </body>
+<footer>
+    <div class='col-12'>
+		<hr class='light'>
+		<h5 id='slogan'>&copy; chuberrides.com</h5>
+	</div>
+</footer>
 </html>

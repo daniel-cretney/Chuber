@@ -15,7 +15,7 @@
 <body class='main-container'><br>
     <h1 id='slogan'>Choose Your Method of Payment</h1>
     <br><br>
-    <script src="https://www.paypal.com/sdk/js?client-id=AbyKot2-A1Di2DAL5y46CZcwazIVpDeBmVDKuuq5Yg2w5JTen-0qjz_xTXubpAGxj3s3dwkoHjwr7-Dj"> 
+    <script src="https://www.paypal.com/sdk/js?client-id=AUswnRdNXdUFuSHavSu1BWHrM0byvoV0rgsFlV6uSLjJSUb4r12LJCor2XECG3qgLG3rIOniUqsv8WGK"> 
     </script>
 
     <div id="paypal-button-container"></div>
@@ -27,19 +27,25 @@
           return actions.order.create({
             purchase_units: [{
               amount: {
-                value: <?php echo $_POST['number'] + $_POST['tip']?>
+                value: <?php echo ($_POST['number'] + $_POST['tip'])?>
               }
             }]
           });
         },
         onApprove: function(data, actions) {
           return actions.order.capture().then(function(details) {
-            alert('Transaction completed by ' + details.payer.name.given_name);
+            alert('Transaction completed by ' + details.payer.name.given_name + ', thanks for supporting Chuber!');
           });
         }
       }).render('#paypal-button-container'); // Display payment options on your web page
     </script>
+    <br>
+    <button type="button" id='button' class='btn btn-default'><a href='ratings.php'><i>Leave a Review</i></a></button>
 </body>
-</html>
-</body>
+<footer>
+    <div class='col-12'>
+		<hr class='light'>
+		<h5 id='slogan'>&copy; chuberrides.com</h5>
+	</div>
+</footer>
 </html>

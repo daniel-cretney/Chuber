@@ -13,21 +13,8 @@
     <a href='index.html'><img id='image'src='photos/logo.jpg'></a>
 </nav>
 <body class='main-container'><br>
-    <h1 id='slogan'>Let Us Know About Your Experience</h1><br>
-    <form method='post' action='confirmation.php'>
-        <input type='text' id='center' name='name' placeholder='Enter Your Name' required><br><br>
-        <label id='slogan'>Leave a Rating: </label>
-            <select name='rating'>
-                <option value='1'>1</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-                <option value='4'>4</option>
-                <option value='5' selected>5</option>
-            </select>
-        <br><br>
-        <input id='center' type='text' placeholder='Leave a Review'><br><br>
-        <input type='submit' id='button' class='btn btn-default' value='Submit'>
-    </form>
+    <h1 id='slogan'>Thank you for your feedback!</h1><br><br>
+    <button type="button" id='button' class='btn btn-default'><a href='index.html'><i>Home Page</i></a></button>
 </body>
 <footer>
     <div class='col-12'>
